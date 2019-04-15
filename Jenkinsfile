@@ -12,12 +12,7 @@ pipeline {
                         string(name: 'PERSON', defaultValue: 'Eric', description: 'name')
                     }
                 }
-        }
-
-        stage('test') {
-            steps {
-                echo "${PERSON}"
-            }
+            echo "Hello, ${PERSON}, nice to meet you"
         }
     }
 }
