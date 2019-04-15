@@ -12,7 +12,9 @@ pipeline {
                         string(name: 'PERSON', defaultValue: 'Eric', description: 'name')
                     }
                 }
-            echo "Hello, ${PERSON}, nice to meet you"
+            steps {
+                sh 'echo "Hello, ${PERSON}, nice to meet you"'
+            }
         }
     }
 }
