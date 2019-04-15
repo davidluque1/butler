@@ -4,7 +4,13 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo "hello, world"'
-                sh 'echo "next step"'
+                input {
+                    message "proceed?"
+                    ok "yes"
+                    parameters {
+                        string(name: 'PERSON', defaultValue: 'Eric', description: 'name')
+                    }
+                }
             }
         }
 
