@@ -2,9 +2,6 @@ pipeline {
     agent any
     stages {
         stage('build') {
-            steps {
-                sh 'echo "hello, world"'
-            }
             input {
                     message "proceed?"
                     ok "yes"
