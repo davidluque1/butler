@@ -16,7 +16,7 @@ pipeline {
 
         stage('test') {
             steps {
-                sh 'echo "and hello, ${PERSON}"'
+                echo "and hello, ${PERSON}"
             }
         }
     }
