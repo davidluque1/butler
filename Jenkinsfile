@@ -11,6 +11,7 @@ pipeline {
                 }
             steps {
                 sh 'echo "Hello, ${PERSON}, nice to meet you"'
+                sh label: '', script: 'app.sh'
             }
         }
     }
