@@ -9,10 +9,11 @@ pipeline {
                         string(name: 'PERSON', defaultValue: 'Eric', description: 'name')
                     }
                 }
-            parameters {
+     
+            steps {
+                       parameters {
   choice choices: ['yes', 'no'], description: '', name: 'cool?'
 }
-            steps {
                 sh 'echo "Hello, ${PERSON}, nice to meet you"'
                 sh label: '', script: 'app.sh'
             }
