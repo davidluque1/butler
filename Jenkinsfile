@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        choice choices: ['18.10', '19.04'], description: '', name: 'UbuntuRelease' ?'
+        choice choices: ['18.10', '19.04'], description: '', name: 'UbuntuRelease?'
     }
     stages {
         stage('build') {
