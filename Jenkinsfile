@@ -14,7 +14,7 @@ pipeline {
                 }
      
             steps {
-                sh 'echo "Hello, ${PERSON}, nice to meet you on ${UbuntuRelease}"'
+                sh 'echo "Hello, ${PERSON}, nice to meet you on ${params.UbuntuRelease}"'
                 sh 'chmod +x app.sh'
                 sh label: '', script: './app.sh'
             }
