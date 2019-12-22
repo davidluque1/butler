@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        choice choices: ['18.10', '19.04'], description: '', name: 'Ubuntu Release' ?'
+        choice choices: ['18.10', '19.04'], description: '', name: 'UbuntuRelease' ?'
     }
     stages {
         stage('build') {
@@ -14,7 +14,7 @@ pipeline {
                 }
      
             steps {
-                sh 'echo "Hello, ${PERSON}, nice to meet you on ${Ubuntu Release}"'
+                sh 'echo "Hello, ${PERSON}, nice to meet you on ${UbuntuRelease}"'
                 sh 'chmod +x app.sh'
                 sh label: '', script: './app.sh'
             }
