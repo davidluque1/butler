@@ -15,6 +15,7 @@ pipeline {
      
             steps {
                 sh 'echo "Hello, ${PERSON}, nice to meet you"'
+                sh 'ls -l;pwd'
                 sh label: '', script: 'app.sh'
             }
         }
