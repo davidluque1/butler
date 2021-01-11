@@ -17,6 +17,12 @@ echo "da"'''
       }
     }
 
+    stage('archive artifacts') {
+      steps {
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
+      }
+    }
+
   }
   parameters {
     choice(name: 'UBUNTU', choices: ['18.10', '19.04'], description: 'Chose Ubuntu Release')
